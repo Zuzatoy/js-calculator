@@ -93,6 +93,23 @@ window.onload = function() {
    }
 
 }
+function sendNumbers() {
+    attachNumber(this.value);
+    filter();
+    }
 
-
+    function sendSymbol() {
+        calculate(this.value);
+    }
+  
+  function attachNumber(num) {
+    var display = document.getElementById('display');
+    
+    if (display.value.length <= 10) { 
+      display.value += num;
+        } else {
+      alert("Too many digits!");
+    }
+  }
+  
 
